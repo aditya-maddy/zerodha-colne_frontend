@@ -12,13 +12,13 @@ const Login = () => {
     setLoading(true);
 
     try {
-      const res = await axios.post("https://zerodha-colne-zsx2.onrender.com//login", {
+      const res = await axios.post("https://zerodha-colne-zsx2.onrender.com/login", {
         username,
         password,
       }, { withCredentials: true });
 
       if (res.data.redirect) window.location.href = res.data.redirect;
-       window.location.href = "http://localhost:5174/dashboard";
+       window.location.href = "zerodha-colne-dshboard.vercel.app/dashboard";
     } catch (err) {
       alert(err.response?.data?.message || "Login failed");
     } finally {

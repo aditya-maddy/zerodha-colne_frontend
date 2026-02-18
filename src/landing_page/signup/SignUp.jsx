@@ -14,7 +14,7 @@ const Signup = () => {
 
   try {
     const res = await axios.post(
-      "https://zerodha-colne-zsx2.onrender.com//signup",
+      "https://zerodha-colne-zsx2.onrender.com/signup",
       {
         username: name,
         email,
@@ -25,7 +25,7 @@ const Signup = () => {
 
     alert(res.data.message); // Signup successful
    
-   window.location.href = "http://localhost:5174/dashboard";
+   window.location.href = "zerodha-colne-dshboard.vercel.app/dashboard";
     
   } catch (err) {
     alert(err.response?.data?.message || "Signup failed");
