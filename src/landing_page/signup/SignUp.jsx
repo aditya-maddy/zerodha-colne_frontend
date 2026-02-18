@@ -39,7 +39,7 @@ const Signup = () => {
   return (
     <div className="signup-container">
       <h2>Create your Zerodha account</h2>
-      {/* <p className="subtitle">Start investing in stocks & mutual funds</p> */}
+      <p className="subtitle">Start investing in stocks & mutual funds</p>
       <form onSubmit={handleSignup}>
         <input type="text" placeholder="Full name" value={name} onChange={e => setName(e.target.value)} required />
         <input type="email" placeholder="Email address" value={email} onChange={e => setEmail(e.target.value)} required />
