@@ -14,7 +14,7 @@ const handleLogin = async (e) => {
   try {
     // Trim inputs to avoid spaces
     const res = await axios.post(
-      "https://zerodha-colne-zsx2.onrender.com/users/login",
+      "https://zerodha-colne-zsx2.onrender.com/api/users/login",
       {
         username: username.trim(),
         password: password.trim(),
@@ -31,7 +31,9 @@ const handleLogin = async (e) => {
     localStorage.setItem("token", token);
 
     // Redirect to dashboard
-    window.location.href = "https://zerodha-colne-dshboard.vercel.app";
+   setTimeout(() => {
+      window.location.href = "https://zerodha-colne-dshboard.vercel.app";
+    }, 5000); 
 
   } catch (err) {
     alert(err.response?.data?.message || "Login failed");
