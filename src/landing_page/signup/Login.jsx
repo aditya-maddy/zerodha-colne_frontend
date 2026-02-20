@@ -14,7 +14,7 @@ const handleLogin = async (e) => {
   try {
     // Trim inputs to avoid spaces
     const res = await axios.post(
-      "https://zerodha-colne-zsx2.onrender.com/api/users/login",
+      "https://zerodha-colne-zsx2.onrender.com/users/login",
       {
         username: username.trim(),
         password: password.trim(),
